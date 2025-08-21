@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height: 100vh;
+            margin: 0;
+            background-color:#1B1B1B;
+        }
+        .box{
+            height:350px;
+            width:350px;
+            background-color:#0a0d36;
+            border-radius:5px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+            z-index: 1;
+            overflow:hidden;
+            
+        }
+        .box h2{
+            color:white;
+            font-family:arial;
+        }
+        .box::before {
+            content:"";
+            background-image:conic-gradient(#8A2BE2, #FF007F, #00FFFF,#8A2BE2);
+            inset: -30%;
+            position:absolute;
+            z-index: -2;
+            animation-name:border-animation;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            border-radius:5px;
+        }
+        .box::after {
+            content:"";
+            background-color:#0a0d36;
+            border-radius:5px;
+            
+            inset: 3px;
+            position:absolute;
+            z-index: -1;
+            
+        }
+        @keyframes border-animation{
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        
+
+        </style>
+    
+</head>
+    <body>
+        <div class="box">
+            <h2>BORDER ANIMATION</h2>
+            
+        </div>
+    </body>
+</html>
