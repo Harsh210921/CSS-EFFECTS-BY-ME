@@ -18,12 +18,62 @@
             display:flex;
             justify-content:center;
             align-items:center;
+            flex-direction: column;
             position:relative;
             z-index: 1;
             overflow:hidden;
             
         }
+        .box:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+}
+        .box2{
+            height:40px;
+            width:300px;
+            background-color:#333333;
+            border-radius:5px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            position:relative;
+            z-index: 1;
+            overflow:hidden;
+        }
+        .box2:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+}
+        .box2::before {
+            content:"";
+            background-image:conic-gradient(#FFD700, #FFA500, red,#FFD700);
+            inset: -500%;
+            position:absolute;
+            z-index: -2;
+            animation-name:border-animation;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            border-radius:5px;
+        }
+        .box2::after {
+            content:"";
+            background-color:#0a0d36;
+            border-radius:5px;
+            
+            inset: 3px;
+            position:absolute;
+            z-index: -1;
+            
+        }
         .box h2{
+            color:white;
+            font-family:arial;
+            display: block;
+        }
+        
+        .box2 p{
             color:white;
             font-family:arial;
         }
@@ -62,6 +112,9 @@
     <body>
         <div class="box">
             <h2>BORDER ANIMATION</h2>
+            <div class="box2">
+                <p>THIS IS SECOND BORDER</p>
+            </div>
             
         </div>
     </body>
