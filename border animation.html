@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+BORDER HARSH
+</title>
+  <style>
+    .body {
+      background-color: #36454F;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+  height: 350px;
+  width: 350px;
+  border-radius: 10px;
+  background-color:black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+        
+    }
+@property --angle{
+            syntax:"<angle>";
+            initial-value:0deg;
+            inherits: false;
+        }
+   
+    .card::before, .card::after {
+        
+      content: "";
+      position: absolute;
+      height:100%;
+      width:100%;
+      border-radius: 10px;
+      padding:3px;
+      top:50%;
+      left:50%;
+      translate:-50% -50%;
+      background-image:conic-gradient(from var(--angle) at 20% 50%, #FF00FF, #00FFFF,#FFFF00,#FF00FF);
+      z-index: -1; 
+      animation-name:border;
+      animation-duration:2s;
+      animation-iteration-count:infinite;
+      animation-timing-function: linear;
+      
+    }
+
+    .paragraph {
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+    
+    .card::after{
+        filter:blur(0.3rem);
+        opacity:0.9;
+    }
+
+    .card p {
+      color: white;
+      font-family: sans-serif;
+    }
+    
+    @keyframes border{
+        from{
+            --angle:0deg;
+        }
+        to{
+            --angle:360deg;
+            
+        }
+        
+    }
+    
+    
+  </style>
+</head>
+<body class="body">
+  <div class="card">
+    <p class="paragraph">THIS IS OUR CARD</p>
+    <p>we will try to add animated border</p>
+  </div>
+</body>
+</html>
