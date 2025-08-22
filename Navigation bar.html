@@ -68,15 +68,20 @@
             #menu-btn, #close-btn i {
             font-size:2rem;
         }
+        @media(max-width:800px){
+            .hide{
+                display:none;
+            }
+        }
         </style>
         
     </head>
     <body>
         <nav>
             <ul class="navbar">
-                <li class="list"><a href="#">MYSTERY</a></li>
-                <li class="list"><a href="#">NEWS</a></li>
-                <li class="list"><a href="#">ABOUT</a></li>
+                <li class="list hide"><a href="#">MYSTERY</a></li>
+                <li class="list hide"><a href="#">NEWS</a></li>
+                <li class="list hide"><a href="#">ABOUT</a></li>
                 <li id="close-btn"onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
             </ul>
             <ul class="sidebar">
