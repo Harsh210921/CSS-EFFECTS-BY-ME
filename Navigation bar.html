@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+        
+        body{
+            background-color:#1B1B1B;
+            min-height:100vh;
+            background-image: url("https://wallpapers.com/images/hd/kurzgesagt-5jax5fobqq0qbfug.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+            .navbar{
+                display:flex;
+                margin:0;
+                padding:0;
+                list-style:none;
+                flex-direction:row;
+                justify-content:space-around;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 2px;
+                padding:0.2%;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            }
+            .sidebar{
+                display:none;
+                margin:0;
+                padding:0;
+                top:1%;
+                position: fixed;
+                right: 0;
+                width:50%;
+                min-height:70vh;
+                list-style:none;
+                flex-direction:column;
+                align-items:center;
+                justify-content:space-around;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 2px;
+                padding:0.2%;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+                z-index:999;
+                
+            }
+            .list,list{
+                width:100;
+                font-family:arial;
+                font-size:1.4rem;
+                
+               
+                
+            
+            }
+            a,i{
+               font-family: 'Poppins', sans-serif;
+               font-weight: 700;
+               font-size: 1.3rem;
+               color: #F5F5F5;
+               text-decoration: none;
+               width:100%;
+                
+            }
+            #menu-btn, #close-btn i {
+            font-size:2rem;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <nav>
+            <ul class="navbar">
+                <li class="list"><a href="#">MYSTERY</a></li>
+                <li class="list"><a href="#">NEWS</a></li>
+                <li class="list"><a href="#">ABOUT</a></li>
+                <li id="close-btn"onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
+            </ul>
+            <ul class="sidebar">
+                <li id="close-btn"onclick=hideSidebar()><i class="fa-solid fa-xmark"></i></li>
+                <li class="list"><a href="#">MYSTERY</a></li>
+                <li class="list"><a href="#">NEWS</a></li>
+                <li class="list"><a href="#">ABOUT</a></li>
+                
+                
+                
+                
+            </ul>
+        </nav>
+        
+        <script>
+            function showSidebar(){
+                const sidebar=document.querySelector(".sidebar")
+                sidebar.style.display='flex';
+                
+                const navbar=document.querySelector(".navbar")
+                navbar.style.display='none';
+                
+            }
+            function hideSidebar(){
+                const sidebar=document.querySelector(".sidebar")
+                sidebar.style.display='none';
+                const navbar=document.querySelector(".navbar")
+                navbar.style.display='flex';
+            }
+        </script>
+        
+    </body>
+</html>
