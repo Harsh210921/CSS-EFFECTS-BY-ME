@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .tab-bg{
+            margin:0;
+            padding:0;
+            display:flex;
+            flex-direction:row;
+            color:#808080;
+            justify-content:space-around;
+            list-style-type: none;
+            background-color:transparent;
+            font-family:arial;
+            
+            
+            
+            
+        }
+        .tab:hover{
+            color:white;
+            text-decoration:underline;
+        }
+        
+        .tab{
+            cursor:pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .content{
+            margin:0;
+            padding:10px;
+            display:flex;
+            flex-direction:row;
+            list-style-type: none;
+            position:relative;
+            justify-content:center;
+            
+            font-family:arial;
+        }
+        .p2, .p3, .p4{
+            justify-content:center;
+            position:absolute;
+            display:none;
+            color:red;
+            
+            
+        }
+        .p1{
+            display:block;
+            color:red;
+        }
+        body{
+            background-color:#282828;
+        }
+        
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            
+                <ul class="tab-bg">
+                    <li class="tab" onclick="showTab('home')"><div class="ho">HOME</div></li>
+                    <li class="tab" onclick="showTab('mystery')"><div class="my">MYSTERY</div></li>
+                    <li class="tab" onclick="showTab('news')"><div class="ne">NEWS</div></li>
+                    <li class="tab" onclick="showTab('about')"><div class="ab">ABOUT</div></li>
+                </ul>
+            
+            
+        </div>
+        <div class="content">
+            <div class="p1">
+              <p>THE HOME TAB</p>  
+            </div>
+            <div class="p2">
+              <p>MYSTERY TAB</p>  
+            </div>
+            <div class="p3">
+              <p>NEWS TAB HERE</p>  
+            </div>
+            <div class="p4">
+              <p>ABOUT TAB HERE</p>  
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <script>
+            const tabValue=document.querySelector(".tab")
+            
+            function showTab(name){
+    // hide all
+    document.querySelector(".p1").style.display = "none";
+    document.querySelector(".p2").style.display = "none";
+    document.querySelector(".p3").style.display = "none";
+    document.querySelector(".p4").style.display = "none";
+    
+    document.querySelector(".ho").style.color = "#808080";
+    document.querySelector(".my").style.color = "#808080";
+    document.querySelector(".ne").style.color = "#808080";
+    document.querySelector(".ab").style.color = "#808080";
+
+    
+    if(name==='home'){
+      document.querySelector(".p1").style.display="flex";
+      document.querySelector(".ho").style.color = "white";
+      
+    }
+    else if(name==='mystery'){
+      document.querySelector(".p2").style.display="flex";
+          document.querySelector(".my").style.color = "white";
+
+    }
+    else if(name==='news'){
+      document.querySelector(".p3").style.display="flex";
+          document.querySelector(".ne").style.color = "white";
+
+    }
+    else if(name==='about'){
+      document.querySelector(".p4").style.display="flex";
+          document.querySelector(".ab").style.color = "white";
+
+    }
+  }
+        </script>
+    </body>
+</html>
