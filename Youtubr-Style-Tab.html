@@ -26,6 +26,14 @@
             cursor:pointer;
             transition: all 0.3s ease-in-out;
         }
+        
+        .active{
+            color:white;
+            text-decoration:underline;
+            
+        }
+        
+        
         .content{
             margin:0;
             padding:10px;
@@ -98,30 +106,30 @@
     document.querySelector(".p3").style.display = "none";
     document.querySelector(".p4").style.display = "none";
     
-    document.querySelector(".ho").style.color = "#808080";
-    document.querySelector(".my").style.color = "#808080";
-    document.querySelector(".ne").style.color = "#808080";
-    document.querySelector(".ab").style.color = "#808080";
+    document.querySelector(".ho").classList.remove("active");
+    document.querySelector(".my").classList.remove("active");
+    document.querySelector(".ne").classList.remove("active");
+    document.querySelector(".ab").classList.remove("active");
 
     
     if(name==='home'){
       document.querySelector(".p1").style.display="flex";
-      document.querySelector(".ho").style.color = "white";
+      document.querySelector(".ho").classList.add("active");
       
     }
     else if(name==='mystery'){
       document.querySelector(".p2").style.display="flex";
-          document.querySelector(".my").style.color = "white";
+          document.querySelector(".my").classList.add("active");
 
     }
     else if(name==='news'){
       document.querySelector(".p3").style.display="flex";
-          document.querySelector(".ne").style.color = "white";
+          document.querySelector(".ne").classList.add("active");
 
     }
     else if(name==='about'){
       document.querySelector(".p4").style.display="flex";
-          document.querySelector(".ab").style.color = "white";
+          document.querySelector(".ab").classList.add("active");
 
     }
   }
