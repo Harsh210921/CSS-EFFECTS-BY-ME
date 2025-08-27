@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .wrapper {
+        
+        width: 90%;
+        max-width: 1536px;
+        margin-inline: auto;
+        position: relative;
+        height: 100px;
+        margin-top: 2rem;
+        overflow: hidden;
+        mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+      }
+      
+      .item {
+        width: 200px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: lightpink;
+        position: absolute;
+        top: 0;
+        left: max(calc(200px * 8), 100%);
+
+        /* Animation setup */
+        animation-name: scleft;
+        animation-duration: 30s; 
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+      @keyframes scleft {
+      25%{opacity: 0.8;}
+      50%{opacity: 1;}
+     100%{
+     opacity: 0.8;
+    left: -200px;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+      <div class="item item6"></div>
+      <div class="item item7"></div>
+      <div class="item item8"></div>
+    </div>
+  </body>
+</html>
